@@ -11,10 +11,22 @@ TrackMyBus.com is website that helps users to find a bus that travels to their d
 ## <u>How it works?</u><br>
 When a user enters the website and select their destination and current location, the website will provide the user with live location of the bus and details of the driver travelling to that destination that will pass by the user.The user will also get push notifications when the bus reaches closer to the user. <br>
 ![3](https://user-images.githubusercontent.com/60286610/119253956-3ebc0300-bbd1-11eb-8575-aae2507aa314.jpg)<br>
-## <u>Hmmm... So how drivers update the location?</u><br>
+## <u>Hmmm... So how driver's update the location?</u><br>
 Login credentials are already given to verified drivers to avoid spamming.The bus driver login to the website from their phone and he/she will be asked to allow location access. Then they have to enter the starting point and destination of the route the bus is going to travel. The live location will be shared to the website.<br>
 ![4](https://user-images.githubusercontent.com/60286610/119253971-572c1d80-bbd1-11eb-8843-29949f1f66d0.jpg)<br>
-In this way people can know when a bus will reach them or where the bus has reached at a particular  time.
+In this way people can know when a bus will reach them or where the bus has reached at a particular  time.<br>
+## <u>Tech Stack Used</u><br>
+<li>HTML</li>
+<li>CSS</li>
+<li>JavaScript</li>
+<li>MySQL</li>
+<li>Flask</li>
+
+## <u>Contributors</u><br>
+Anand Sreekumar
+Alan C James
+Christo Sivi
+Dijo Daiju
 
 
 
