@@ -23,9 +23,9 @@ In this way people can know when a bus will reach them or where the bus has reac
 <li>Flask</li>
 
 ## <u>Contributors</u><br>
-Anand Sreekumar
-Alan C James
-Christo Sivi
+Anand Sreekumar<br>
+Alan C James<br>
+Christo Sivi<br>
 Dijo Daiju
 
 
