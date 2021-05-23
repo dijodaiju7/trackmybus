@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<head>
+    <title>Section</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="/static/css/tstyle.css">
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.0.0/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.0.0/mapbox-gl.css' rel='stylesheet' />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+    <script>
+      // (B) GET GPS COODINATES + DRAW MAP
+      window.addEventListener("DOMContentLoaded", function () {
+        // (B1) INSERT ACCESS TOKEN HERE!
+        mapboxgl.accessToken = 'pk.eyJ1IjoiZGV2b2tvZGVyIiwiYSI6ImNrb3kxc2JtZjA3Y2QycXBqMWpybTdqOXMifQ.AWkYEcGuHBBbKh4EF1k8Ng';
+  
+        navigator.geolocation.getCurrentPosition(
+          // (B2) ON SUCCESSFULLY GETTING GPS COORDINATES
+          function (pos) {
+            // DRAW MAP
+            let map = new mapboxgl.Map({
+              container: 'map',
+              style: 'mapbox://styles/mapbox/streets-v11',
+              center: [pos.coords.longitude, pos.coords.latitude],
+              zoom: 13
+            });
+            // DRAW MARKER
+            let marker = new mapboxgl.Marker()
+              .setLngLat([pos.coords.longitude, pos.coords.latitude])
+              .addTo(map);
+          },
+  
+          // (B3) ON FAILING TO GET GPS COORDINATES
+          function (err) {
+            console.log(err);
+          },
+  
+          // (B4) GPS OPTIONS
+          {
+            enableHighAccuracy: true,
+            timeout: 5000,
+            maximumAge: 0
+          }
+        );
+      });
+      </script>
+  </head>
+<body>
+<div class="d-md-flex h-md-100 align-items-center">
+
+    <!-- First Half -->
+    
+    <div class="col-md-6 p-0 bg-white h-md-100">
+        <div class="text-black d-md-flex align-items-center h-100 p-5 text-center justify-content-center">
+            <div class="logoarea pt-5 pb-5">
+                <h2>Track Your 🚌  </h2><br>
+                <form action="/atrack" method="POST">
+                    <div class="form-group">
+                      <label for="text">Source</label>
+                      <input type="text" class="form-control" id="source">
+                    </div><br>
+                    <div class="form-group">
+                      <label for="destination">Destination</label>
+                      <input type="text" class="form-control" id="destination">
+                    </div><br>
+                    <button type="submit" class="btn btn-primary">Track</button><br>
+                    {{driver}}
+                  </form>        
+                </div>
+                
+        </div>
+    </div>
+    
+    <!-- Second Half -->
+    
+    <div class="col-md-6 p-0 bg-indigo h-md-100 loginarea">
+        <div class="text-white d-md-flex align-items-center h-md-100 p-5 justify-content-center">
+          <div id="map" style="width:100%; height:400px;"></div>
+        </div>
+    </div>
+        
+    </div>
+    </body>
+    </html>

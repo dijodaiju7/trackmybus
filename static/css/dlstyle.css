@@ -1,0 +1,27 @@
+.ui.button
+{
+ 
+    margin:0 auto;
+    display:block;
+
+background-color: #480032;
+color:#FFFFFF;
+}
+.ui.button:hover, .ui.button:focus, .ui.button:active, .ui.button.active, .open .dropdown-toggle.ui.button 
+{
+ 
+background-color: #480032;
+color:#FFFFFF;
+}
+.ui.container.segment
+{
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.ui.segment{
+ padding: 5em 5em 8em 1em;
+}
+.ui.segment:first-child {
+    margin-top: 12em;
+}
+
+
