@@ -22,6 +22,7 @@ In this way people can know when a bus will reach them or where the bus has reac
 <li>JavaScript</li>
 <li>MySQL</li>
 <li>Flask</li>
+<li>MapBox</li>
 
 ## <u>Contributors</u><br>
 Anand Sreekumar<br>
